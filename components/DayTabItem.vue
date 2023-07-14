@@ -6,9 +6,13 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div class="font-extrabold px-3 py-2 rounded-lg inline-block" :class="{ 'bg-primary ': active }">
+    <NuxtLink
+        :to="`?day=` + name"
+        class="font-extrabold px-3 py-2 rounded-lg inline-block"
+        :class="{ 'bg-primary ': active }"
+    >
         {{ name }}
-    </div>
+    </NuxtLink>
 </template>
 
 <style scoped></style>
