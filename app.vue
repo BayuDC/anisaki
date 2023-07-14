@@ -1,10 +1,15 @@
+<script lang="ts" setup>
+const appConfig = useAppConfig();
+</script>
+
 <template>
     <Html>
         <Head>
-            <Title>Anisaki</Title>
+            <Title>{{ appConfig.name }} | {{ appConfig.description }}</Title>
+            <Meta name="description" :content="appConfig.description" />
         </Head>
         <Body class="bg-dark text-light">
-            <div class="p-4 text-6xl font-extrabold">Anisaki</div>
+            <SiteInfo />
         </Body>
     </Html>
 </template>
