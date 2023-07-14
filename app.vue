@@ -17,6 +17,7 @@ const appConfig = useAppConfig();
         </Head>
         <Body class="bg-dark text-light">
             <SiteInfo />
+            <DayTab />
         </Body>
     </Html>
 </template>
