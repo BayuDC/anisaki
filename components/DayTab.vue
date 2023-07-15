@@ -16,9 +16,7 @@ const selected = computed(() => {
 <template>
     <div class="flex overflow-x-auto px-5 no-scrollbar">
         <ul class="flex gap-1 p-1 bg-secondary rounded-xl mx-auto">
-            <li v-for="(day, i) in days" :key="i">
-                <DayTabItem :name="day" :active="day.toLowerCase() == selected" />
-            </li>
+            <DayTabItem v-for="(day, i) in days" :key="i" :name="day" :active="day.toLowerCase() == selected" />
         </ul>
     </div>
 </template>

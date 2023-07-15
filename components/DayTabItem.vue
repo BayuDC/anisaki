@@ -3,16 +3,26 @@ const props = defineProps<{
     name: string;
     active?: boolean;
 }>();
+const self = ref<HTMLElement>();
+
+onMounted(() => {
+    if (props.active) {
+        self.value?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+});
 </script>
 
 <template>
-    <NuxtLink
-        :to="`?day=` + name"
-        class="font-extrabold px-3 py-2 rounded-lg inline-block"
-        :class="{ 'bg-primary ': active }"
-    >
-        {{ name }}
-    </NuxtLink>
+    <li ref="self">
+        <NuxtLink
+            :to="`?day=` + name"
+            class="font-extrabold px-3 py-2 rounded-lg inline-block"
+            :class="{ 'bg-primary ': active }"
+            ref="self"
+        >
+            {{ name }}
+        </NuxtLink>
+    </li>
 </template>
 
 <style scoped></style>
