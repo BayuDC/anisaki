@@ -16,7 +16,7 @@ onMounted(() => {
     <li ref="self">
         <NuxtLink
             :to="`?day=` + name"
-            class="font-extrabold px-3 py-2 rounded-lg inline-block"
+            class="font-bold px-3 py-2 rounded-lg inline-block"
             :class="{ 'bg-primary ': active }"
             ref="self"
         >

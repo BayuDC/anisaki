@@ -11,6 +11,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.16.19
     version: 18.16.19
+  currently-airing-anime:
+    specifier: ^0.6.3
+    version: 0.6.3
   nuxt:
     specifier: ^3.6.2
     version: 3.6.2(@types/node@18.16.19)
@@ -2314,6 +2317,10 @@ packages:
 
   /cuint@0.2.2:
     resolution: {integrity: sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==}
+    dev: true
+
+  /currently-airing-anime@0.6.3:
+    resolution: {integrity: sha512-PWJryBiqLL4l5vgdtejgF1BavZ2oMHNBgWkWbHSg0qCpvGLJEyuJoh0YDWNPbsjp1w1Tjb9aJodv4RVVIktoXw==}
     dev: true
 
   /data-uri-to-buffer@4.0.1:

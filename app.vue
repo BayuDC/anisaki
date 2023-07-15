@@ -18,6 +18,7 @@ const appConfig = useAppConfig();
         <Body class="bg-dark text-light">
             <SiteInfo />
             <DayTab />
+            <Anime />
         </Body>
     </Html>
 </template>
