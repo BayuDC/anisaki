@@ -12,7 +12,7 @@ const appConfig = useAppConfig();
             <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
             <Link
                 rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
             />
         </Head>
         <Body class="bg-dark text-light">

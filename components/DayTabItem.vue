@@ -7,7 +7,7 @@ const self = ref<HTMLElement>();
 
 onMounted(() => {
     if (props.active) {
-        self.value?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        self.value?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
 });
 </script>
