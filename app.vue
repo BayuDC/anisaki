@@ -28,7 +28,9 @@ nuxtApp.hook('app:mounted', () => {
                 <Loading v-if="loading" />
             </Transition>
             <SiteInfo />
-            <DayTab />
+            <ClientOnly>
+                <DayTab />
+            </ClientOnly>
             <Anime />
         </Body>
     </Html>
