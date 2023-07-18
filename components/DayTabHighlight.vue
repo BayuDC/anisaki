@@ -19,7 +19,7 @@ onUpdated(() => {
 <template>
     <div
         class="h-10 bg-primary rounded-lg absolute inset-0 m-1"
-        :class="{ 'transition duration-200': !first }"
+        :class="{ 'transition-[width,transform] duration-200': !first }"
         :style="style"
     ></div>
 </template>

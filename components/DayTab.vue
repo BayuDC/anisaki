@@ -36,7 +36,7 @@ onMounted(() => {
             <ul class="flex gap-1 p-1 bg-secondary rounded-xl" ref="list">
                 <DayTabItem v-for="(d, i) in days" :key="i" :name="d" :active="i == day" />
             </ul>
-            <DayTabActive v-bind="pos" />
+            <DayTabHighlight v-bind="pos" />
         </div>
     </div>
 </template>
