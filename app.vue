@@ -1,5 +1,11 @@
 <script lang="ts" setup>
 const appConfig = useAppConfig();
+const nuxtApp = useNuxtApp();
+const loading = ref(true);
+
+nuxtApp.hook('app:mounted', () => {
+    loading.value = false;
+});
 </script>
 
 <template>
@@ -15,7 +21,10 @@ const appConfig = useAppConfig();
                 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
             />
         </Head>
-        <Body class="bg-dark text-light">
+        <Body class="text-light bg-dark">
+            <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
+                <Loading v-if="loading" />
+            </Transition>
             <SiteInfo />
             <DayTab />
             <Anime />
