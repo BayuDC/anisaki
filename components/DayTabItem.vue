@@ -14,12 +14,7 @@ onMounted(() => {
 
 <template>
     <li ref="self">
-        <NuxtLink
-            :to="`?day=` + name"
-            class="font-bold px-3 py-2 rounded-lg inline-block"
-            :class="{ 'bg-primary ': active }"
-            ref="self"
-        >
+        <NuxtLink :to="`?day=` + name" class="font-bold px-3 py-2 rounded-lg inline-block z-10 relative" ref="self">
             {{ name }}
         </NuxtLink>
     </li>
