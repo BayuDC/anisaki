@@ -12,6 +12,7 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.16.19",
     "@vueuse/motion": "^2.0.0",
+    "fontfaceobserver": "^2.3.0",
     "nuxt": "^3.6.2",
     "prettier": "^3.0.0",
     "vue3-lazyload": "^0.3.6"

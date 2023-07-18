@@ -14,6 +14,9 @@ devDependencies:
   '@vueuse/motion':
     specifier: ^2.0.0
     version: 2.0.0(vue@3.3.4)
+  fontfaceobserver:
+    specifier: ^2.3.0
+    version: 2.3.0
   nuxt:
     specifier: ^3.6.2
     version: 3.6.2(@types/node@18.16.19)
@@ -2818,6 +2821,10 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dev: true
+
+  /fontfaceobserver@2.3.0:
+    resolution: {integrity: sha512-6FPvD/IVyT4ZlNe7Wcn5Fb/4ChigpucKYSvD6a+0iMoLn2inpo711eyIcKjmDtE5XNcgAkSH9uN/nfAeZzHEfg==}
     dev: true
 
   /formdata-polyfill@4.0.10:

@@ -1,10 +1,18 @@
 <script lang="ts" setup>
 const appConfig = useAppConfig();
 const nuxtApp = useNuxtApp();
+
 const loading = ref(true);
+const loading2 = ref(true);
 
 nuxtApp.hook('app:mounted', () => {
     loading.value = false;
+});
+
+onMounted(() => {
+    useFontMonitor().then(() => {
+        loading2.value = false;
+    });
 });
 </script>
 
@@ -25,13 +33,13 @@ nuxtApp.hook('app:mounted', () => {
         </Head>
         <Body class="text-light bg-dark">
             <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
-                <Loading v-if="loading" />
+                <Loading v-if="loading || loading2" />
             </Transition>
             <SiteInfo />
             <ClientOnly>
                 <DayTab />
+                <Anime />
             </ClientOnly>
-            <Anime />
         </Body>
     </Html>
 </template>
