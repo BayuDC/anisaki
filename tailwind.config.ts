@@ -11,6 +11,7 @@ export default {
             light: '#EEEEEE',
             primary: '#E966A0',
             secondary: '#6554AF',
+            white: '#000000',
         },
     },
     content: [],
