@@ -20,6 +20,8 @@ nuxtApp.hook('app:mounted', () => {
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
             />
+            <Link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+            <Link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
         </Head>
         <Body class="text-light bg-dark">
             <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
