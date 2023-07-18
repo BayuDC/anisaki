@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useLazyload } from 'vue3-lazyload';
+import { useMotion } from '@vueuse/motion';
 
 const props = defineProps<{
     anime: Anime;
@@ -7,9 +8,21 @@ const props = defineProps<{
 
 const imgLoaded = ref(false);
 const img = useLazyload(ref(props.anime.coverImage.large), {
-    lifecycle: {
-        loaded(el) {
-            imgLoaded.value = true;
+    lifecycle: { loaded: (el) => (imgLoaded.value = true) },
+});
+
+const target = ref<HTMLElement>();
+
+useMotion(target, {
+    initial: {
+        scale: 0,
+        opacity: 0,
+    },
+    visibleOnce: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            delay: Math.random() * 300,
         },
     },
 });
@@ -17,7 +30,7 @@ const img = useLazyload(ref(props.anime.coverImage.large), {
 
 <template>
     <li>
-        <div>
+        <div ref="target">
             <div class="w-full rounded-lg overflow-hidden aspect-[5/7] bg-dark2">
                 <img
                     class="object-cover w-full h-full transition duration-300"
