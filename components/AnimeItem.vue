@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import { Media } from 'currently-airing-anime';
 import { useLazyload } from 'vue3-lazyload';
 
 const props = defineProps<{
-    anime: Media;
+    anime: Anime;
 }>();
 
 const imgLoaded = ref(false);
@@ -26,9 +25,17 @@ const img = useLazyload(ref(props.anime.coverImage.large), {
                     ref="img"
                 />
             </div>
-            <h4 class="mt-2 md:mt-4 text-sm font-bold opacity-60">{{ anime.title.romaji }}</h4>
+            <h4 class="mt-2 md:mt-4 text-sm font-bold opacity-60 two-lines">{{ anime.title.romaji }}</h4>
         </div>
     </li>
 </template>
 
-<style scoped></style>
+<style>
+.two-lines {
+    /* width: 100px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+</style>
