@@ -1,3 +1,9 @@
 export default function useAnime(zone: number) {
-    return useFetch<{ schedule: Anime[][] }>(`/api/anime/${zone}`);
+    const loading = useLoading();
+
+    return useFetch<{ schedule: Anime[][] }>(`/api/anime/${zone}`, {
+        onResponse() {
+            loading.value[2] = false;
+        },
+    });
 }
