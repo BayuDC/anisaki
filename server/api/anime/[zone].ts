@@ -80,5 +80,12 @@ export default defineEventHandler(async (event) => {
         schedule[date.getDay()].push(anime);
     });
 
-    return { lastUpdatedAt: new Date(), schedule };
+    return {
+        lastUpdatedAt: new Date(),
+        schedule: schedule.map((s) => {
+            return s.sort((a, b) => {
+                return a.nextAiringEpisode.airingAt - b.nextAiringEpisode.airingAt;
+            });
+        }),
+    };
 });
