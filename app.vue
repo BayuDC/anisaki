@@ -2,6 +2,7 @@
 const appConfig = useAppConfig();
 const nuxtApp = useNuxtApp();
 const loading = useLoading();
+const isLoading = checkLoading();
 
 nuxtApp.hook('app:mounted', () => {
     loading.value[0] = false;
@@ -49,7 +50,7 @@ useSeoMeta({
         </Head>
         <Body class="text-light bg-dark">
             <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
-                <Loading v-if="loading[0] || loading[1] || loading[2]" />
+                <Loading v-if="isLoading" />
             </Transition>
             <SiteInfo />
             <ClientOnly>

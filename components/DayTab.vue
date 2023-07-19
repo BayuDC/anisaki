@@ -5,7 +5,7 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const day = useState<number>('day', () => new Date().getDay());
 
 const list = ref<HTMLElement>();
-const pos = reactive({ x: 0, w: 0 });
+const active = ref<HTMLElement>();
 
 watchEffect(() => {
     const input = route.query.day as string;
@@ -17,16 +17,7 @@ watchEffect(() => {
     day.value = index;
 });
 onMounted(() => {
-    watch(
-        day,
-        () => {
-            const active = list.value?.children[day.value] as HTMLElement;
-
-            pos.x = active.offsetLeft;
-            pos.w = active.clientWidth;
-        },
-        { immediate: true },
-    );
+    watch(day, () => (active.value = list.value?.children[day.value] as HTMLElement), { immediate: true });
 });
 </script>
 
@@ -36,7 +27,7 @@ onMounted(() => {
             <ul class="flex gap-1 p-1 bg-secondary rounded-xl" ref="list">
                 <DayTabItem v-for="(d, i) in days" :key="i" :name="d" :active="i == day" />
             </ul>
-            <DayTabHighlight v-bind="pos" />
+            <DayTabHighlight :element="active" />
         </div>
     </div>
 </template>
