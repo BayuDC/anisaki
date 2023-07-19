@@ -12,14 +12,32 @@ onMounted(() => {
         loading.value[1] = false;
     });
 });
+
+useSeoMeta({
+    title: appConfig.name,
+    description: appConfig.description,
+    author: appConfig.author,
+    themeColor: appConfig.color,
+    ogType: 'website',
+    ogSiteName: appConfig.name,
+    ogUrl: appConfig.url,
+    ogTitle: appConfig.name,
+    ogDescription: appConfig.description,
+    ogImage: appConfig.banner.url,
+    ogImageType: appConfig.banner.type,
+    ogImageHeight: appConfig.banner.height,
+    ogImageWidth: appConfig.banner.width,
+    twitterImage: appConfig.banner.url,
+    twitterCard: 'summary_large_image',
+});
 </script>
 
 <template>
     <Html>
         <Head>
             <Title>{{ appConfig.name }} | {{ appConfig.description }}</Title>
-            <Meta name="description" :content="appConfig.description" />
 
+            <Link rel="canonical" :href="appConfig.url" />
             <Link rel="preconnect" href="https://fonts.googleapis.com" />
             <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
             <Link

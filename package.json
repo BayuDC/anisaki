@@ -9,6 +9,7 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
+    "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.16.19",
     "@vueuse/motion": "^2.0.0",
