@@ -1,7 +1,7 @@
 export default defineAppConfig({
     name: 'Anisaki',
     description: 'The Simplest Anime Schedule Website',
-    author: 'BayuDC',
+    author: { name: 'BayuDC', url: 'https://github.com/BayuDC' },
     color: '#2B2730',
     url: 'https://anisaki.vercel.app',
     banner: {

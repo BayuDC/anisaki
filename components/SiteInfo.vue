@@ -8,7 +8,7 @@ function onTitleClick() {
 </script>
 
 <template>
-    <div class="px-5 py-6">
+    <header class="px-5 py-6">
         <div class="flex flex-col items-center text-center">
             <h1 class="text-5xl font-extrabold">
                 <NuxtLink to="/" @click="onTitleClick">
@@ -19,7 +19,7 @@ function onTitleClick() {
                 {{ appConfig.description }}
             </p>
         </div>
-    </div>
+    </header>
 </template>
 
 <style scoped></style>

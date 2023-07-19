@@ -17,7 +17,7 @@ onMounted(() => {
 useSeoMeta({
     title: appConfig.name,
     description: appConfig.description,
-    author: appConfig.author,
+    author: appConfig.author.name,
     themeColor: appConfig.color,
     ogType: 'website',
     ogSiteName: appConfig.name,
@@ -49,14 +49,19 @@ useSeoMeta({
             <Link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
         </Head>
         <Body class="text-light bg-dark">
-            <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
-                <Loading v-if="isLoading" />
-            </Transition>
-            <SiteInfo />
-            <ClientOnly>
-                <DayTab />
-                <Anime />
-            </ClientOnly>
+            <div class="min-h-screen flex flex-col">
+                <Transition leave-from-class="opacity-100" leave-to-class="opacity-0" leave-active-class="transition">
+                    <Loading v-if="isLoading" />
+                </Transition>
+                <SiteInfo />
+                <main>
+                    <ClientOnly>
+                        <DayTab />
+                        <Anime />
+                    </ClientOnly>
+                </main>
+                <SiteCredit />
+            </div>
         </Body>
     </Html>
 </template>
