@@ -36,6 +36,14 @@ query (
 `;
 
 export default defineEventHandler(async (event) => {
+    const zone = parseInt(event.context.params?.zone || '') as number;
+    if (!Number.isInteger(zone)) {
+        throw createError({
+            statusCode: 418,
+            statusMessage: 'Fuck you!',
+        });
+    }
+
     const animes: Anime[] = [];
     let page = 1;
 
@@ -68,7 +76,7 @@ export default defineEventHandler(async (event) => {
         if (!anime.nextAiringEpisode) return;
         const date = new Date(0);
         date.setUTCSeconds(anime.nextAiringEpisode.airingAt);
-        date.setHours(date.getHours() + 0);
+        date.setHours(date.getHours() + zone);
         schedule[date.getDay()].push(anime);
     });
 
