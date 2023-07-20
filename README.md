@@ -12,7 +12,7 @@ They are great and useful website that provides a lot of information,
 but i want a simple version, so i created this project.
 The name anisaki comes from the words "anime" and "saiki"(it is a javanese word for "now").
 
-Try it now: https://anisaki.vercel.app
+Try it now: https://anisaki.bayudc.fun
 
 ## 🖥️ Tech Stacks
 
@@ -37,13 +37,12 @@ This site only have a single page.
 
 ## 👨‍💻 Development
 
-Just like reguler nuxt project.
+Just like regular nuxt project.
 
 > **Note**
 > Requirements: [Node.js](https://nodejs.org) >= 16.x setup with [pnpm](https://pnpm.io) is recommended.
 
 ```
-$ git clone https://github.com/BayuDC/anisaki.git
 $ pnpm i
 $ pnpm dev
 ```
