@@ -53,4 +53,5 @@ $ pnpm dev
 -   [Vercel](https://vercel.com), for the free severless cloud
 -   [Anilist](https://anilist.co), for the API that provides data i need
 -   [Google Translate](https://translate.google.com), for helping me write this
+-   @gifaldyazkaa, for making this README look pretty
 -   My Friends, for trying this simple project
