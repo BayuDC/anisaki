@@ -1,12 +1,12 @@
 ![Banner](https://cdn.discordapp.com/attachments/946013429200723989/1131233464432205906/banner_compressed.png)
 
+Art source: https://www.pixiv.net/en/artworks/95523000
+
 <div align="center">
 
 # Anisaki
 
 </div>
-
-Art source: https://www.pixiv.net/en/artworks/95523000
 
 ## 📖 Background
 
