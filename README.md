@@ -1,6 +1,6 @@
 # Anisaki
 
-[![Banner](https://cdn.discordapp.com/attachments/946013429200723989/1131233464432205906/banner_compressed.png)](https://anisaki.bayudc.fun)
+![banner](https://github.com/user-attachments/assets/99525cac-393e-4c5b-9018-5efce0f9cb98)
 
 Art source: https://www.pixiv.net/en/artworks/95523000
 
@@ -12,7 +12,7 @@ They are great and useful website that provides a lot of information,
 but i want a simple version, so i created this project.
 The name anisaki comes from the words "anime" and "saiki"(it is a javanese word for "now").
 
-Try it now: https://anisaki.bayudc.fun
+Try it now: [https://anisaki.bayudc.fun](https://anisaki.vercel.app/)
 
 ## 🖥️ Tech Stacks
 
@@ -33,7 +33,7 @@ Try it now: https://anisaki.bayudc.fun
 
 This site only have a single page.
 
-![Page screenshot](https://cdn.discordapp.com/attachments/946013429200723989/1131323603904888954/leMxiiZzEe60cQJCrBEAAg.png)
+![Screenshot](https://github.com/user-attachments/assets/df7725b8-2a9e-41d9-93e1-2186e1ab587c)
 
 ## 👨‍💻 Development
 
